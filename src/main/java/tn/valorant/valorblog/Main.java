@@ -1,19 +1,30 @@
 package tn.valorant.valorblog;
 
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
-public class Main {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+
+import java.util.Objects;
+
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        // Load the addPost.fxml file
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addPost.fxml")));
+
+        // Create a scene with the loaded FXML content
+        Scene scene = new Scene(root);
+
+        // Set the scene in the primary stage
+        primaryStage.setScene(scene);
+        primaryStage.setTitle("Add Post");
+        primaryStage.show();
+    }
+
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        launch(args);
     }
 }

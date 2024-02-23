@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.valorant.valorblog.controllers.AddPostController">
+  <children>
+    <TextField fx:id="postTitleField" layoutX="99.0" layoutY="61.0" promptText="Title" text="aaaa" />
+    <TextField fx:id="postContentField" layoutX="99.0" layoutY="141.0" promptText="Content" text="First post" />
+    <TextField fx:id="postImageField" layoutX="99.0" layoutY="221.0" promptText="Image" text="https" />
+    <Button layoutX="453.0" layoutY="309.0" mnemonicParsing="false" onAction="#addPost" text="Ajouter" />
+  </children>
+</AnchorPane>
