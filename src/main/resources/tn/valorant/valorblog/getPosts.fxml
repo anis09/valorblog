@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import tn.valorant.valorblog.controllers.GetPostsController.ImageViewTableCell?>
+<?import tn.valorant.valorblog.models.Post?>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.valorant.valorblog.controllers.GetPostsController">
+    <children>
+        <TableView fx:id="tableView" layoutX="54.0" layoutY="72.0" prefHeight="274.0" prefWidth="482.0">
+            <columns>
+                <TableColumn fx:id="titleCol" prefWidth="161.0" text="Post Title" />
+                <TableColumn fx:id="contentCol" prefWidth="139.0" text="Post Content" />
+                <TableColumn fx:id="imageCol" prefWidth="150.0" text="Post Image" />
+                <TableColumn fx:id="likesCol" prefWidth="150.0" text="Post Likes" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

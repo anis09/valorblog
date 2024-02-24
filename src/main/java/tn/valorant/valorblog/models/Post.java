@@ -1,31 +1,20 @@
 package tn.valorant.valorblog.models;
 
+import javafx.scene.image.Image;
 
 public class Post {
     private int postId;
     private String postContent;
     private String postTitle;
     private int postLikes;
-    private String postImage;
     private boolean isArchived;
+    private String imagePath; // Assuming image path is stored in the database
+    private Image postImage; // For displaying in JavaFX UI
 
-    // Constructor
-    public Post(int postId, String postContent, String postTitle, int postLikes, String postComments,
-                String postImage, boolean isArchived) {
-        this.postId = postId;
-        this.postContent = postContent;
-        this.postTitle = postTitle;
-        this.postLikes = postLikes;
-        this.postImage = postImage;
-
-        this.isArchived = isArchived;
-    }
-
+    // Constructors, getters, and setters
     public Post() {
-
     }
 
-    // Getters and setters
     public int getPostId() {
         return postId;
     }
@@ -58,17 +47,6 @@ public class Post {
         this.postLikes = postLikes;
     }
 
-
-    public String getPostImage() {
-        return postImage;
-    }
-
-    public void setPostImage(String postImage) {
-        this.postImage = postImage;
-    }
-
-
-
     public boolean isArchived() {
         return isArchived;
     }
@@ -77,16 +55,19 @@ public class Post {
         isArchived = archived;
     }
 
-    @Override
-    public String toString() {
-        return "Post{" +
-                "postId='" + postId + '\'' +
-                ", postContent='" + postContent + '\'' +
-                ", postTitle='" + postTitle + '\'' +
-                ", postLikes='" + postLikes + '\'' +
-                ", postImage='" + postImage + '\'' +
-                ", isArchived=" + isArchived +
-                '}';
+    public String getImagePath() {
+        return imagePath;
     }
 
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
+    }
+
+    public Image getPostImage() {
+        return postImage;
+    }
+
+    public void setPostImage(Image postImage) {
+        this.postImage = postImage;
+    }
 }

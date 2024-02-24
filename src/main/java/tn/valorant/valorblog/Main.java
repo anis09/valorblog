@@ -15,6 +15,8 @@ public class Main extends Application {
         // Load the addPost.fxml file
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("addPost.fxml")));
 
+
+
         // Create a scene with the loaded FXML content
         Scene scene = new Scene(root);
 

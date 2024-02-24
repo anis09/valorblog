@@ -39,7 +39,7 @@ public class UpdatePostController {
         postContentField.setText(selectedPost.getPostContent());
         postTitleField.setText(selectedPost.getPostTitle());
         postLikesField.setText(String.valueOf(selectedPost.getPostLikes()));
-        postImageField.setText(selectedPost.getPostImage());
+       // postImageField.setText(selectedPost.getPostImage());
     }
 
     @FXML
@@ -54,7 +54,7 @@ public class UpdatePostController {
             selectedPost.setPostContent(postContent);
             selectedPost.setPostTitle(postTitle);
             selectedPost.setPostLikes(postLikes);
-            selectedPost.setPostImage(postImage);
+            //selectedPost.setPostImage(postImage);
 
             try {
                 postService.updatePost(selectedPost);
